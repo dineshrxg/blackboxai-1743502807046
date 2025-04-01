@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickClean - Laundry Services in India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">QuickClean</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-200">Home</a>
+                <a href="services.html" class="hover:text-blue-200">Services</a>
+                <a href="login.html" class="hover:text-blue-200">Login</a>
+                <a href="signup.html" class="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-100">Sign Up</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-white py-32 px-4 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Laundry Services</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Fast, reliable, and affordable laundry solutions at your doorstep across India</p>
+        <a href="services.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg">Book Now</a>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tshirt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wash & Fold</h3>
+                    <p class="text-gray-600 mb-4">Professional washing and neat folding of your clothes</p>
+                    <p class="text-blue-600 font-bold">Starting at ₹99/kg</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-iron text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ironing</h3>
+                    <p class="text-gray-600 mb-4">Expert ironing for crisp, wrinkle-free clothes</p>
+                    <p class="text-blue-600 font-bold">Starting at ₹5/piece</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-soap text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Dry Cleaning</h3>
+                    <p class="text-gray-600 mb-4">Specialized cleaning for delicate fabrics</p>
+                    <p class="text-blue-600 font-bold">Starting at ₹120/piece</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">QuickClean</h3>
+                    <p>India's most trusted laundry service provider since 2023</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="login.html" class="hover:text-blue-400">Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p><i class="fas fa-phone mr-2"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope mr-2"></i> support@quickclean.in</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 QuickClean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
