@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - QuickClean</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">QuickClean</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-blue-200">Home</a>
+                <a href="services.html" class="hover:text-blue-200">Services</a>
+                <a href="dashboard.html" class="hover:text-blue-200">Dashboard</a>
+                <div class="flex items-center space-x-2">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random" alt="User" class="w-8 h-8 rounded-full">
+                    <span>User</span>
+                </div>
+                <a href="#" class="hover:text-blue-200" id="logoutBtn">Logout</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Order Tracking Content -->
+    <div class="container mx-auto py-8 px-4">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold">Order #QC12345</h1>
+                <a href="dashboard.html" class="text-blue-600 hover:text-blue-800 flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Dashboard
+                </a>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-500">Order Date</h3>
+                        <p class="mt-1 text-sm text-gray-900">15 June 2023</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-500">Pickup Date</h3>
+                        <p class="mt-1 text-sm text-gray-900">16 June 2023</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-500">Delivery Date</h3>
+                        <p class="mt-1 text-sm text-gray-900">18 June 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Details -->
+            <div class="mb-8">
+                <h2 class="text-xl font-bold mb-4">Order Details</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Wash & Fold</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5 kg</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹99/kg</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹495</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ironing</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3 pieces</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹5/piece</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹15</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-right">Subtotal</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹510</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-right">Delivery Charge</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">₹0</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 text-right">Total</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900">₹510</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tracking Timeline -->
+            <div>
+                <h2 class="text-xl font-bold mb-4">Order Status</h2>
+                <div class="relative">
+                    <!-- Timeline -->
+                    <div class="border-l-2 border-blue-200 absolute h-full left-4 top-0"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="mb-8 ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-gray-900">Order Placed</h3>
+                            <p class="text-sm text-gray-600">15 June 2023, 10:30 AM</p>
+                            <p class="mt-1 text-sm">Your order has been received and is being processed.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-gray-900">Pickup Scheduled</h3>
+                            <p class="text-sm text-gray-600">15 June 2023, 11:45 AM</p>
+                            <p class="mt-1 text-sm">Pickup scheduled for tomorrow between 10 AM - 12 PM.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-gray-900">Picked Up</h3>
+                            <p class="text-sm text-gray-600">16 June 2023, 10:15 AM</p>
+                            <p class="mt-1 text-sm">Your clothes have been picked up by our delivery partner.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-gray-900">In Progress</h3>
+                            <p class="text-sm text-gray-600">16 June 2023, 1:30 PM</p>
+                            <p class="mt-1 text-sm">Your clothes are being washed and ironed.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-sync-alt text-white text-xs animate-spin"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-400">
+                            <h3 class="font-bold text-gray-900">Ready for Delivery</h3>
+                            <p class="text-sm text-gray-600">17 June 2023, 4:00 PM</p>
+                            <p class="mt-1 text-sm">Your order is ready and will be delivered tomorrow.</p>
+                        </div>
+                    </div>
+
+                    <div class="ml-8 relative">
+                        <div class="absolute -left-8 top-0 w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-white text-xs"></i>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-gray-500">Delivered</h3>
+                            <p class="text-sm text-gray-400">Expected: 18 June 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery Information -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Pickup Address</h3>
+                    <p class="text-gray-600">123, Main Street<br>
+                    Bangalore, Karnataka<br>
+                    560001<br>
+                    Phone: +91 9876543210</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-bold text-gray-900 mb-2">Delivery Address</h3>
+                    <p class="text-gray-600">123, Main Street<br>
+                    Bangalore, Karnataka<br>
+                    560001<br>
+                    Phone: +91 9876543210</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
